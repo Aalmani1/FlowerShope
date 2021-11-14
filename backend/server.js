@@ -1,7 +1,21 @@
-const express = require('express')
-const app = express()
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const PORT = 3001;
+const item = require("./router/items");
 
-// app.use(express.json())
+app.use("/admin", item);
+
+app.get("/", (req, res) => {
+  console.log("we are online");
+});
+
+app.listen(PORT, (err) => {
+  if (err) {
+    return console.log("ERORR ", err);
+  }
+  console.log(`Listening on port ` + PORT);
+});
 
 //////////////////////////////////////////////
 
@@ -16,18 +30,4 @@ const user = require('./router/user')
 app.use('/user', user)
 
 
-//////////////////////////////////////////////
 
-
-app.get("/", (req, res) => {
-    res.send('hi')
-    console.log("hi???")
-})
-
-
-app.listen(3001,(err) =>{
-    if(err){
-        return console.log(err)
-    }
-    console.log("listen port 3001")
-})
