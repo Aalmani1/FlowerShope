@@ -9,7 +9,7 @@ import Cart from './cart'
 
 export default function NavBar() {
     return (
-        <div>
+        <div >
       <Router>
    <Nav className="justify-content-end" activeKey="/home">
      <Nav.Item>

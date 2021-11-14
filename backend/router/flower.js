@@ -3,7 +3,7 @@
 const express = require('express')
 const Router = express.Router()
 const fs =require('file-system')
-const flowers = require('../api/flower.json') 
+const flowers = require('./flower.json') 
 
 // Router.use(express.json())
 

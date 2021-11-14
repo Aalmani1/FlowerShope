@@ -1,7 +1,7 @@
 const express = require('express')
 const Router = express.Router()
 const fileHandler = require('file-system')
-const users=require('../api/user.json')
+const users=require('./user.json')
 
 Router.use(express.json())
 
