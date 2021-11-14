@@ -16,31 +16,24 @@ export default function NavBar() {
        <Nav.Link ><Link exact to="/">Home</Link></Nav.Link>
      </Nav.Item>
      <Nav.Item>
-       <Nav.Link > <Link to="/About">About us</Link></Nav.Link>
+       <Nav.Link ><Link to="/About">About us</Link></Nav.Link>
      </Nav.Item>
      <Nav.Item>
-       <Nav.Link to="shop">shop</Nav.Link>
+       <Nav.Link><Link to="/Shop">Shop</Link></Nav.Link>
      </Nav.Item>
      <Nav.Item>
-       <Nav.Link to="Cart" >
-         <ShoppingCartIcone />
+       <Nav.Link>
+       <Link to="/Cart"><ShoppingCartIcone /></Link>
        </Nav.Link>
     </Nav.Item>
   </Nav> 
 
-          
-    {/* <Switch> */}
     < Routes>
     <Route exact path="/" element={<Home />}></Route>
     <Route path="/About" element={<About />}></Route>
-    <Route path="Shop" element={<Shop />}></Route>
-    <Route path="Cart" element={<Cart />}></Route>
+    <Route path="/Shop" element={<Shop />}></Route>
+    <Route path="/Cart" element={<Cart />}></Route>
 
-    {/* <Route exact path="/" ><Home/></Route>
-    <Route   path="/about" ><About/></Route>
-    <Route   path="/shop"><Shop/></Route>
-    <Route   path="/cart"><Cart/></Route> */}
-    {/* </Switch> */}
     </Routes>
         </Router>
         </div>
