@@ -16,4 +16,12 @@
   },
   "author": "",
   "license": "ISC"
+  "dependencies": {
+    "file-system": "^2.2.2",
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+
+  "description": ""
 }
