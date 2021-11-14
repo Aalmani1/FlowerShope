@@ -3,10 +3,12 @@ import Carousel from 'react-bootstrap/carousel'
 import img1 from './img/img1.jpg'
 import img2 from './img/img2.png'
 import img3 from './img/img3.jpg'
+import Iconhome from './home/Iconhome'
+import Homecard from './home/Homecard'
 
 export default function home() {
     return (
-        <div>
+        <div className="home"> 
             
             <div>
             <Carousel fade >
@@ -62,6 +64,13 @@ export default function home() {
   </Carousel.Item>
 </Carousel>
 </div>
+<div>
+  <Iconhome />
+</div>
+<div>
+  <Homecard />
+</div>
+
         </div>
     )
 }

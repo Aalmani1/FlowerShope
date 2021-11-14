@@ -12,6 +12,7 @@ export default function NavBar() {
         <div >
       <Router>
    <Nav className="justify-content-end" activeKey="/home">
+     {/* <img className="logo" src="https://t4.ftcdn.net/jpg/03/14/56/35/360_F_314563555_mZkinERKSsTWJoagxvnj1Rn7PAI9egIH.jpg" /> */}
      <Nav.Item>
        <Nav.Link ><Link exact to="/">Home</Link></Nav.Link>
      </Nav.Item>
