@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/carousel";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
+import { Row, Col } from "react-bootstrap";
 import img1 from "./img/img1.jpg";
 import img2 from "./img/img2.png";
 import img3 from "./img/img3.jpg";
@@ -60,19 +61,15 @@ export default function Shop() {
         </Carousel>
       </div>
 
-      <div>
+      <div class="row row-cols-1 row-cols-md-3 g-4" style={{ margin: " 5%" }}>
         {flower.map((item) => {
           return (
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-              <div class="col">
-                <div class="card h-100">
-                  <img src={item.img} class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <h5 class="card-title">{item.name}</h5>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted">Price : {item.price}</small>
-                  </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src={item.img} class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">{item.name}</h5>
+                  <small class="text-muted">Price : {item.price}</small>
                 </div>
               </div>
             </div>
