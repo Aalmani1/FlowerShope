@@ -32,4 +32,25 @@
 }
 .Homecard{
     background-color: rgb(255, 237, 225);
+   margin: 20px;
+   margin-bottom: 40px;
+   text-align: center;
+}
+.Homecard > h4{
+    padding: 90px;
+}
+ 
+.CardGroup {
+    margin: 10px;
+    margin-bottom: 90px;
+    background-color: rgb(255, 237, 225);
+    text-align: center;
+    
+}
+
+.Homecardflex{
+    display: flex;
+    flex: 1 1 0px;
+    margin: 70px;
+
 }
