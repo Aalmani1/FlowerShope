@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/carousel";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import img1 from "./img/img1.jpg";
 import img2 from "./img/img2.png";
 import img3 from "./img/img3.jpg";
@@ -18,6 +18,10 @@ export default function Shop() {
     });
     // console.log(flower);
   }, []);
+
+  function addToCart() {
+    console.log("add to cart");
+  }
 
   return (
     <div className="home">
@@ -61,7 +65,7 @@ export default function Shop() {
         </Carousel>
       </div>
 
-      <div class="row row-cols-1 row-cols-md-3 g-4" style={{ margin: " 5%" }}>
+      <div class="row row-cols-1 row-cols-md-3 g-4" style={{ margin: " 9%" }}>
         {flower.map((item) => {
           return (
             <div class="col">
@@ -71,6 +75,9 @@ export default function Shop() {
                   <h5 class="card-title">{item.name}</h5>
                   <small class="text-muted">Price : {item.price}</small>
                 </div>
+                <Button variant="dark" onClick={addToCart}>
+                  Add To Cart
+                </Button>
               </div>
             </div>
           );
