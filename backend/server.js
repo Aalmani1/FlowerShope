@@ -4,7 +4,7 @@ const cors = require("cors");
 const PORT = 3001;
 const flower = require("./router/items");
 
-app.use("/admin", flower);
+app.use("/flowers", flower);
 
 app.get("/", (req, res) => {
   console.log("we are online");

@@ -6,11 +6,11 @@ router.use(express.json());
 
 router.use(cors());
 
-router.get("/getFlowers", (req, res) => {
+router.get("/items", (req, res) => {
   res.send(flowers);
 });
 
-router.post("/postFlowers", (req, res) => {
+router.post("/admin/postFlowers", (req, res) => {
   req.body.data;
   const flower = {
     id: flowers.length + 1,
@@ -23,7 +23,7 @@ router.post("/postFlowers", (req, res) => {
   res.send(flowers);
 });
 
-router.delete("/deleteFlowers/:id", (req, res) => {
+router.delete("/admin/deleteFlowers/:id", (req, res) => {
   let found = flowers.find(function (flower) {
     return flower.id === parseInt(req.params.id);
   });
@@ -36,7 +36,7 @@ router.delete("/deleteFlowers/:id", (req, res) => {
   }
 });
 
-router.put("/putFlowers/:id", (req, res) => {
+router.put("/admin/putFlowers/:id", (req, res) => {
   let found = flowers.find(function (flower) {
     return flower.id === parseInt(req.params.id);
   });
