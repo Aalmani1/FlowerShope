@@ -1,9 +1,11 @@
 import React from 'react'
+import Image from 'react-bootstrap/Image'
+import img5  from './img/img5.jpg'
 
 export default function cart() {
     return (
         <div>
-             <h1>ih i am cart</h1>
+             <Image  width="100%"  src={img5} fluid />
         </div>
     )
 }
