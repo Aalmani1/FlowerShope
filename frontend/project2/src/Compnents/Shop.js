@@ -4,6 +4,7 @@ import Carousel from "react-bootstrap/carousel";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Row, Col, Button } from "react-bootstrap";
+import Footer from "./Footer";
 import img1 from "./img/img1.jpg";
 import img2 from "./img/img2.png";
 import img3 from "./img/img3.jpg";
@@ -35,7 +36,7 @@ export default function Shop() {
               src={img1}
             ></img>
             <Carousel.Caption>
-              <h1>PRODECT LIST</h1>
+              <h1 class="prodectList">PRODECT LIST</h1>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -47,7 +48,7 @@ export default function Shop() {
             ></img>
 
             <Carousel.Caption>
-              <h1>PRODECT LIST</h1>
+              <h1 class="prodectList">PRODECT LIST</h1>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -59,7 +60,7 @@ export default function Shop() {
             ></img>
 
             <Carousel.Caption>
-              <h1>PRODECT LIST</h1>
+              <h1 class="prodectList">PRODECT LIST</h1>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
@@ -83,6 +84,8 @@ export default function Shop() {
           );
         })}
       </div>
+
+      <Footer />
     </div>
   );
 }
