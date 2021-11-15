@@ -1,7 +1,7 @@
 const express = require('express')
 const Router = express.Router()
 const fileHandler = require('file-system')
-const users=require('../api/user.json')
+const users=require('./user.json')
 
 Router.use(express.json())
 
@@ -19,7 +19,7 @@ Router.get('/', (req, res) => {
 Router.post('/', function(req, res) {
     console.log(req.body)
     let user ={
-        id: Math.floor(Math.random() * 1000) + 1,
+        id:users.length +1,
         email: req.body.email,
         password: req.body.password
     }
