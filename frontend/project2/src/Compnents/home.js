@@ -6,11 +6,12 @@ import img3 from './img/img3.jpg'
 import Iconhome from './home/Iconhome'
 import Homecard from './home/Homecard'
 
+
 export default function home() {
     return (
         <div className="home"> 
             
-            <div>
+            <div >
             <Carousel fade >
   <Carousel.Item>
     <img
@@ -20,8 +21,8 @@ export default function home() {
       src={img1}
     ></img>
     <Carousel.Caption>
-        <header><h2>welcome to Rosetud</h2></header>
-      <h1>PERFECT BOUQUET</h1>
+     
+      <h1 className="hometitel">PERFECT BOUQUET</h1>
       <p>
       Nulla vitae elit libero, a pharetra augue mollis interdum.
       Nulla vitae elit libero, a pharetra augue mollis interdum
@@ -37,8 +38,8 @@ export default function home() {
     ></img>
 
     <Carousel.Caption>
-    <header><h2>welcome to Rosetud</h2></header>
-      <h1>FLORIST'S DREAM</h1>
+   
+      <h1 className="hometitel">FLORIST'S DREAM</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Nulla vitae elit libero, a pharetra augue mollis interdum
@@ -54,8 +55,8 @@ export default function home() {
     ></img>
 
     <Carousel.Caption>
-     <header><h2>welcome to Rosetud</h2></header>
-      <h1>TIME TO BLOSSOM</h1>
+    
+      <h1 className="hometitel">TIME TO BLOSSOM</h1>
       <p>
       Praesent commodo cursus magna, vel scelerisque nisl consectetur.
       Nulla vitae elit libero, a pharetra augue mollis interdum
@@ -70,6 +71,8 @@ export default function home() {
 <div>
   <Homecard />
 </div>
+
+  
 
         </div>
     )

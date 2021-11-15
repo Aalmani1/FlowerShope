@@ -17,6 +17,9 @@ app.listen(PORT, (err) => {
   console.log(`Listening on port ` + PORT);
 });
 
+const cors = require('cors')
+app.use(cors({origin: 'http://localhost:3000'}))
+
 //////////////////////////////////////////////
 
 // dont forgat http://localhost:3001/flower/
