@@ -15,6 +15,7 @@ import Carousel from "react-bootstrap/carousel";
 export default function cart() {
   return (
     <div className="mother-cart">
+      <h1>hi</h1>
       <div className="imgcart">
         <Carousel>
           <Carousel.Item>
