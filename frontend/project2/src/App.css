@@ -1,104 +1,148 @@
-*{
-    font-family: 'Playfair Display', serif;
+.cart {
+  margin-bottom: 250px;
 }
-.home{
-  margin: 5px;  
+
+.prodectList {
+  padding-bottom: 30%;
 }
-.justify-content-end{
-    background-color: rgb(0, 0, 0);
-    /* opacity: 0.1; */
+
+.imgFooter {
+  width: 40%;
+  padding: 1%;
 }
-.logo{
-    justify-content:center;
-    width: 60px;
-    height: 60px;
-    margin-left: 190px;
+
+.justify-content-end {
+  background-color: rgb(0, 0, 0);
+  /* opacity: 0.1; */
 }
-.logo2{
-    justify-content:center;
-    width: 50px;
-    height: 40px;
-    margin-left: 190px;
+.logo {
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-left: 190px;
 }
-.logo3{
-    justify-content:center;
-    margin-left: 190px;
-    width: 50px;
-    height: 50px;
+.logo2 {
+  justify-content: center;
+  width: 50px;
+  height: 40px;
+  margin-left: 190px;
 }
-.iconhome{
-    margin: 30px;
-    margin-top: 90px;
-   display: grid;
-   justify-content: center;
-   text-align: center;
+.logo3 {
+  justify-content: center;
+  margin-left: 190px;
+  width: 50px;
+  height: 50px;
 }
-.Homecard{
-    background-color: rgb(255, 237, 225);
-   margin: 20px;
-   margin-bottom: 40px;
-   text-align: center;
+.iconhome {
+  margin: 30px;
+  margin-top: 90px;
+  display: grid;
+  justify-content: center;
+  text-align: center;
 }
-.Homecard > h4{
-    padding: 90px;
+.Homecard {
+  background-color: rgb(255, 237, 225);
 }
- 
+
+* {
+  font-family: "Playfair Display", serif;
+}
+.home {
+  margin: 5px;
+}
+.justify-content-end {
+  background-color: rgb(0, 0, 0);
+  /* opacity: 0.1; */
+}
+.logo {
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-left: 190px;
+}
+.logo2 {
+  justify-content: center;
+  width: 50px;
+  height: 40px;
+  margin-left: 190px;
+}
+.logo3 {
+  justify-content: center;
+  margin-left: 190px;
+  width: 50px;
+  height: 50px;
+}
+.iconhome {
+  margin: 30px;
+  margin-top: 90px;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+.Homecard {
+  background-color: rgb(255, 237, 225);
+  margin: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.Homecard > h4 {
+  padding: 90px;
+}
+
 .CardGroup {
-    margin: 10px;
-    margin-bottom: 90px;
-    background-color: rgb(255, 237, 225);
-    text-align: center;
-    
+  margin: 10px;
+  margin-bottom: 90px;
+  background-color: rgb(255, 237, 225);
+  text-align: center;
 }
 
-.Homecardflex{
-    display: flex;
-    flex: 1 1 0px;
-    margin: 70px;
-
+.Homecardflex {
+  display: flex;
+  flex: 1 1 0px;
+  margin: 70px;
 }
 
-.img44{
-    width: 100%;
-    height: 300px;
+.img44 {
+  width: 100%;
+  height: 300px;
 }
 .TEAM {
   height: 200px;
   margin-top: 90px;
 }
-.ourname{
-    display: flex;
-    justify-content:space-evenly;
-    margin: 50px;
-    /* padding: 30px;    */
+.ourname {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px;
+  /* padding: 30px;    */
 }
 
-.ABOUT{
-    text-align: center;
-    margin-bottom: 240px;
+.ABOUT {
+  text-align: center;
+  margin-bottom: 240px;
 }
-.hometitel{
-    margin-bottom: 200px;
+.hometitel {
+  margin-bottom: 200px;
 }
-.Aboutcard{
-    margin: 150px;
+.Aboutcard {
+  margin: 150px;
 }
-.Aboutpag{
-    background-color: rgb(255, 245, 233);
+.Aboutpag {
+  background-color: rgb(255, 245, 233);
 }
-.logein{
-    margin-bottom: 200px;
+.logein {
+  margin-bottom: 200px;
 }
-.logeForm{
-    margin: 80px;
-    margin-left: 300px;
+.logeForm {
+  margin: 80px;
+  margin-left: 300px;
 }
-.loginput{
-   width: 500px;
+.loginput {
+  width: 500px;
 }
-.logbutton{
+.logbutton {
   background-color: rgb(0, 0, 0);
 }
-.logepag{
-    background-color: rgb(255, 248, 239);
+.logepag {
+  background-color: rgb(255, 248, 239);
 }
