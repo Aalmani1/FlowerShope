@@ -1,3 +1,4 @@
+
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/carousel";
@@ -89,3 +90,4 @@ export default function Shop() {
     </div>
   );
 }
+

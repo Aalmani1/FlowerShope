@@ -3,12 +3,16 @@ const app = express();
 const cors = require("cors");
 const PORT = 3001;
 const flower = require("./router/items");
+const user = require("./router/user");
+app.use("/user", user);
 
 app.use("/flowers", flower);
 
 app.get("/", (req, res) => {
   console.log("we are online");
 });
+
+// app.use(cors({ origin: "http://localhost:3000" }));
 
 //////////////////////////////////////////////
 
@@ -18,8 +22,6 @@ app.get("/", (req, res) => {
 //////////////////////////////////////////////
 
 // dont forget http://localhost:3001/user/
-const user = require("./router/user");
-app.use("/user", user);
 
 app.listen(PORT, (err) => {
   if (err) {
