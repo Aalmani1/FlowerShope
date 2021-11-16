@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import ShoppingCartIcone from "@material-ui/icons/ShoppingCart";
 import Home from "../home";
-import About from "../About";
-import Shop from "../Shop";
-import Cart from "../cart";
 import Logein from "../Logein";
+import AddItem from "./AddItems";
+import UpdateItem from "./UpdateItem";
+import AdminHome from "./AdminHome";
 export default function AdminNavbar() {
   return (
     <div>
@@ -14,9 +14,7 @@ export default function AdminNavbar() {
         <Nav className="justify-content-end" activeKey="/home">
           <Nav.Item>
             <Nav.Link>
-              <Link exact to="/">
-                Home
-              </Link>
+              <Link to="/admin/GetDelete">Home / Delete</Link>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
@@ -26,29 +24,16 @@ export default function AdminNavbar() {
           </Nav.Item>
           <Nav.Item>
             <Nav.Link>
-              <Link to="/admin/updateItem">Update Flower</Link>
+              <Link to="/admin/UpdateItem">Update Flower</Link>
             </Nav.Link>
           </Nav.Item>
-          <Nav.Item>
-            <Nav.Link>
-              <Link to="/admin/deleteItem">Delete Item</Link>
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link>
-              <Link to="/Cart">
-                <ShoppingCartIcone />
-              </Link>
-            </Nav.Link>
-          </Nav.Item>
+          <Nav.Item></Nav.Item>
         </Nav>
 
         <Routes>
-          <Route exact path="/" element={<Home />}></Route>
-          <Route path="/About" element={<About />}></Route>
-          <Route path="/Shop" element={<Shop />}></Route>
-          <Route path="/Cart" element={<Cart />}></Route>
-          <Route path="/Logein" element={<Logein />}></Route>
+          <Route exact path="/admin/GetDelete" element={<AdminHome />}></Route>
+          <Route path="/admin/AddItem" element={<AddItem />}></Route>
+          <Route path="/admin/UpdateItem" element={<UpdateItem />}></Route>
         </Routes>
       </Router>
     </div>
