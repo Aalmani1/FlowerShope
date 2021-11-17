@@ -2,16 +2,19 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/carousel";
-import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/CardGroup";
-import { Row, Col, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import Footer from "./Footer";
 import img1 from "./img/img1.jpg";
 import img2 from "./img/img2.png";
 import img3 from "./img/img3.jpg";
+import { useDispatch } from "react-redux";
+import { addcart } from "./redux/cart/cartitem";
 
 export default function Shop() {
   const [flower, setFlower] = useState([]);
+  const dispatch =useDispatch()
+
+
 
   useEffect(() => {
     axios.get("http://localhost:3001/flowers/items").then((res) => {
@@ -21,10 +24,13 @@ export default function Shop() {
     // console.log(flower);
   }, []);
 
-  function addToCart() {
-    console.log("add to cart");
+  const addToCart = (item) => {
+    // console.log("add to cart");
+    dispatch(addcart(item))
+
   }
 
+  
   return (
     <div className="home">
       <div>
@@ -37,7 +43,7 @@ export default function Shop() {
               src={img1}
             ></img>
             <Carousel.Caption>
-              <h1 class="prodectList">PRODECT LIST</h1>
+              <h1 className="prodectList">PRODECT LIST</h1>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -49,7 +55,7 @@ export default function Shop() {
             ></img>
 
             <Carousel.Caption>
-              <h1 class="prodectList">PRODECT LIST</h1>
+              <h1 className="prodectList">PRODECT LIST</h1>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -61,23 +67,23 @@ export default function Shop() {
             ></img>
 
             <Carousel.Caption>
-              <h1 class="prodectList">PRODECT LIST</h1>
+              <h1 className="prodectList">PRODECT LIST</h1>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
       </div>
 
-      <div class="row row-cols-1 row-cols-md-3 g-4" style={{ margin: " 9%" }}>
+      <div className="row row-cols-1 row-cols-md-3 g-4" style={{ margin: " 9%" }}>
         {flower.map((item) => {
           return (
-            <div class="col">
-              <div class="card h-100">
-                <img src={item.img} class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">{item.name}</h5>
-                  <small class="text-muted">Price : {item.price}</small>
+            <div className="col">
+              <div className="card h-100">
+                <img src={item.img} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">{item.name}</h5>
+                  <small className="text-muted">Price : ${item.price}</small>
                 </div>
-                <Button variant="dark" onClick={addToCart}>
+                <Button  variant="dark" onClick={() =>addToCart(item)}>
                   Add To Cart
                 </Button>
               </div>

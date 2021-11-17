@@ -55,7 +55,7 @@ export default function About() {
           nibh vel velit auctor ali quet. Aen ean sol lici tudin, lorem quis
           biben dum au.
         </p>
-        <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/h1-img-1.jpg" />
+        <img className="aboutimgcard" src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/h1-img-1.jpg" />
       </div>
       <Footer />
     </div>

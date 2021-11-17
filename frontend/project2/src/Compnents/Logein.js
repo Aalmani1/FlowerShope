@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import { useNavigate } from "react-router-dom";
 import Carousel from "react-bootstrap/carousel";
 import Form from "react-bootstrap/Form";
 import FormGroup from "react-bootstrap/FormGroup";
@@ -7,9 +8,30 @@ import img1 from "./img/img1.jpg";
 import img2 from "./img/img2.png";
 import img3 from "./img/img3.jpg";
 import Footer from "./Footer";
+import axios from "axios"
 
-export default function logein() {
-  return (
+export default function Logein() {
+// let history = useHistory();
+let navigate = useNavigate()
+const [email, setEmail] = useState("")
+const [pass, setPass] = useState("")
+const [auth, setAuth] = useState(false)
+
+const handlesub = () =>{
+  axios.post("/user/", {email:email, password:pass})
+  .then( (response) => {
+    setAuth(response.data);
+    if (auth == true){
+     navigate("../")
+    }else{
+      alert("Hello!! your not welcom");
+    }
+  })
+  
+}
+
+
+  return ( 
     <div className="logepag">
       <div>
         <Carousel fade>
@@ -21,7 +43,7 @@ export default function logein() {
               src={img1}
             ></img>
             <Carousel.Caption>
-              <h1 className="logein">LOGEIN</h1>
+              <h1 className="logein">LOGIN</h1>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -33,7 +55,7 @@ export default function logein() {
             ></img>
 
             <Carousel.Caption>
-              <h1 className="logein">LOGEIN</h1>
+              <h1 className="logein">LOGIN</h1>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -45,11 +67,12 @@ export default function logein() {
             ></img>
 
             <Carousel.Caption>
-              <h1 className="logein">LOGEIN</h1>
+              <h1 className="logein">LOGIN</h1>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
       </div>
+      {/* ----------------------------------------------------------------------------------------------- */}
       <div className="logeForm">
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -58,6 +81,7 @@ export default function logein() {
               className="loginput"
               type="email"
               placeholder="Enter email"
+              onChange={(e)=>setEmail(e.target.value)} 
             />
           </Form.Group>
 
@@ -67,12 +91,14 @@ export default function logein() {
               className="loginput"
               type="password"
               placeholder="Password"
+              onChange={(e)=>setPass(e.target.value)}
             />
           </Form.Group>
-          <Button className="logbutton" variant="primary" type="submit">
-            Submit
-          </Button>
         </Form>
+        <button className="buttonlogin" onClick={handlesub}>
+          login
+          </button>
+        {/* -------------------------------------------------------------------------------------- */}
       </div>
       <Footer />
     </div>

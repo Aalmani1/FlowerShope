@@ -9,7 +9,7 @@ const flowers = require("./flower.json");
 
 // dont forgat http://localhost:3001/flower/
 
-router.get("/", (req, res) => {
+router.get("/listFlower", (req, res) => {
   console.log(res);
   res.send(JSON.stringify(flowers));
 });

@@ -12,7 +12,7 @@ export default function Homecard() {
     const [flower, setFlower] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3001/flower/')
+        axios.get('http://localhost:3001/flowers/items')
         .then((res) =>{
           console.log(res.data);
           setFlower(res.data);
@@ -28,6 +28,7 @@ export default function Homecard() {
             <div className="Homecardflex">
             {flower.map((item) => { 
             arr.push(item)
+            console.log(arr);
 
         if (arr.length<5){
     return(
@@ -36,7 +37,7 @@ export default function Homecard() {
         <Card.Body>
           <Card.Title><h6>{item.name}</h6></Card.Title>
           <Card.Text>
-          {item.price}
+         ${item.price}
           </Card.Text>
         </Card.Body>
     </CardGroup>

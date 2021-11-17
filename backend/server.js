@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const PORT = 3001;
 const flower = require("./router/items");
+
 const user = require("./router/user");
 app.use("/user", user);
 
@@ -16,7 +17,7 @@ app.get("/", (req, res) => {
 
 //////////////////////////////////////////////
 
-// dont forgat http://localhost:3001/flower/
+// dont forgat http://localhost:3001/flowers/items
 // app.use("/flower", flower);
 
 //////////////////////////////////////////////

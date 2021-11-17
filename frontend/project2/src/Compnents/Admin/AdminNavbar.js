@@ -13,38 +13,28 @@ export default function AdminNavbar() {
       <Router>
         <Nav className="justify-content-end" activeKey="/home">
           <Nav.Item>
-            <Nav.Link>
-              <Link exact to="/">
+              <Link exact="true" to="/">
                 Home
               </Link>
-            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link>
               <Link to="/admin/AddItem">Add Flower</Link>
-            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link>
               <Link to="/admin/updateItem">Update Flower</Link>
-            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link>
               <Link to="/admin/deleteItem">Delete Item</Link>
-            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link>
               <Link to="/Cart">
                 <ShoppingCartIcone />
               </Link>
-            </Nav.Link>
           </Nav.Item>
         </Nav>
 
         <Routes>
-          <Route exact path="/" element={<Home />}></Route>
+          <Route exact="true" path="/" element={<Home />}></Route>
           <Route path="/About" element={<About />}></Route>
           <Route path="/Shop" element={<Shop />}></Route>
           <Route path="/Cart" element={<Cart />}></Route>
