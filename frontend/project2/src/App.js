@@ -1,10 +1,15 @@
-import './App.css';
-import NavBar from './Compnents/Navbar'
+
+import logo from "./logo.svg";
+import "./App.css";
+import NavBar from "./Compnents/Navbar";
+import AdminNavbar from "./Compnents/Admin/AdminNavbar";
+
 
 function App() {
   return (
     <div className="App">
-     <NavBar />
+      <NavBar />
+      <AdminNavbar />
     </div>
   );
 }

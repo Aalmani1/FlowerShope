@@ -14,10 +14,10 @@ router.post("/admin/postFlowers", (req, res) => {
   req.body.data;
   const flower = {
     id: flowers.length + 1,
-    name: req.body.name,
-    img: req.body.img,
-    description: req.body.description,
-    price: req.body.price,
+    name: req.body.data.name,
+    img: req.body.data.img,
+    description: req.body.data.description,
+    price: req.body.data.price,
   };
   flowers.push(flower);
   res.send(flowers);

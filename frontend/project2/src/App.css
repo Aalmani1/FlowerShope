@@ -1,6 +1,24 @@
 
+
 .navItem {
   color: rgba(255, 255, 255, 0.829);
+}
+
+.AdminAddItem {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 3%;
+  padding-bottom: 5%;
+}
+.AddItemButtonSupmit {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.AddItemButtonSupmit:hover {
+  background-color: #555555;
+  color: white;
 
 }
 
