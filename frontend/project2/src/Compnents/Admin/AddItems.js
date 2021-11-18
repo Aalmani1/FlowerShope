@@ -24,12 +24,14 @@ function AddItem() {
     let name = e.target[0].value;
     let img = e.target[1].value;
     let description = e.target[2].value;
-    let price = e.target[2].value;
-
+    let price = e.target[3].value;
+    
+    console.log(img)
     axios
       .post("/flowers/admin/postFlowers", {
         data: { name: name, img: img, description: description, price: price },
       })
+     
       .then((res) => {
         console.log("add suc" + res);
         setFlower([...flower, res.data]);
@@ -94,7 +96,7 @@ function AddItem() {
 
             <Form.Group controlId="formFileSm" className="mb-3">
               <Form.Label>Flower Img</Form.Label>
-              <Form.Control type="file" size="sm" />
+              <Form.Control type="text" placeholder="Enter Flower Img" />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicEmail">

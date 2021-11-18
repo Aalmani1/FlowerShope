@@ -11,7 +11,6 @@ router.get("/items", (req, res) => {
 });
 
 router.post("/admin/postFlowers", (req, res) => {
-  req.body.data;
   const flower = {
     id: flowers.length + 1,
     name: req.body.data.name,
@@ -36,24 +35,24 @@ router.delete("/admin/deleteFlowers/:id", (req, res) => {
   }
 });
 
-router.put("/admin/putFlowers/:id", (req, res) => {
-  let found = flowers.find(function (flower) {
-    return flower.id === parseInt(req.params.id);
+router.put("/admin/putFlowers/", (req, res) => {
+  let flower = flowers.find(function (flower) {
+    return flower.id == parseInt(req.body.data.id);
   });
-
-  if (found) {
+  if (flower) {
     let update = {
-      id: found.id,
-      name: req.body.name,
-      img: req.body.img,
-      description: req.body.description,
-      price: req.body.price,
+      id: flower.id,
+      name: req.body.data.name,
+      img: req.body.data.img,
+      description: req.body.data.description,
+      price: req.body.data.price,
     };
-    let targetIndex = flowers.indexOf(found);
+    let targetIndex = flowers.indexOf(flower);
     flowers.splice(targetIndex, 1, update);
-    res.send(flowers);
+    res.send("item updated");
   } else {
-    res.sendStatus(404);
+    res.send(res.body.data);
+    res.send("Item not found");
   }
 });
 

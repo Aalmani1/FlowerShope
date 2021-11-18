@@ -27,7 +27,7 @@ export default function Shop() {
   const addToCart = (item) => {
     // console.log("add to cart");
     dispatch(addcart(item))
-
+alert("Add Saccfully")
   }
 
   

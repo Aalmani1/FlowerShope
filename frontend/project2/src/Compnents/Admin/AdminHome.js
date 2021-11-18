@@ -4,6 +4,7 @@ import Carousel from "react-bootstrap/carousel";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Row, Col, Button } from "react-bootstrap";
+import UpdateItem from "./UpdateItem";
 import Footer from "../Footer";
 import img1 from "../img/img1.jpg";
 import img2 from "../img/img2.png";
@@ -14,7 +15,8 @@ export default function Shop() {
 
   useEffect(() => {
     axios.get("http://localhost:3001/flowers/items").then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
+      console.log(res)
       setFlower(res.data);
     });
     console.log(flower);
@@ -92,6 +94,16 @@ export default function Shop() {
                 >
                   DELETE
                 </Button>
+
+                {
+                  //   <Button
+                  //   variant="primary"
+                  //   onClick={(e) => {
+                  //   }}
+                  // >
+                  //   EDIT
+                  // </Button>
+                }
               </div>
             </div>
           );

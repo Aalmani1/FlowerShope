@@ -75,34 +75,23 @@ export default function Cart1() {
       {/* ----------------------------------------------------------------------------------------- */}
       <div className="bill">
         <div className="titles">
-          <h3>Product</h3>
-          <h3>Price</h3>
-          <h3>Quantity</h3>
-          <h3>Total</h3>
+          <h5 className="Productcart">Product</h5>
+          <h5 className="ahmad">Price</h5>
+          <h5  className="omer">Quantity</h5>
+          <h5 className="Totalcart">Total</h5>
         </div>
 
         <div className="cartmap">
      {cartt.map((item,index) =>{
   return (
-    <div> { console.log(index) }
-          <HighlightOffIcon className="delet" onClick={() => {dispatch(removecart(item))}}/>
-            {/* <button className="delet" onClick={() => {dispatch(removecart(item))}} > Remove </button> */}
-           {/* <img className="imgcart" src={item.img} class="card-img-top" alt="..." /> */}
-          <h3 className="namecart">{item.name}</h3>
-          <div> ${item.price} </div>
-          <input ref={quantity} onChange={(e)=>
-         { 
-
-           setTotal2({...total2, [index]: item.price * e.target.value})
-
-           
-
-          }
-          
-    
-        }
-         
-         type="number" id="quantity" name="quantity" />
+    <div className="cartbillll"> { console.log(index) }
+          <HighlightOffIcon className="deletbill" onClick={() => {dispatch(removecart(item))}}/>
+           <img className="imgcartbill" src={item.img} width="100px" height="100px" alt="..." />
+          <h6 className="namecartbill">{item.name}</h6>
+          <div className="billprice"> ${item.price} </div>
+          <input className="quantitybutton" ref={quantity} onChange={(e)=>
+         { setTotal2({...total2, [index]: item.price * e.target.value})  }
+          }  type="number" id="quantity" name="quantity" />
         
           <div> {total2[index]} </div>
     </div> 
@@ -111,10 +100,13 @@ export default function Cart1() {
 })}
 
          
-         
-         <h1>{total}</h1>
+       
       </div>
-
+      <div className="fineltotal">
+        <h3>the total:</h3>
+         <h6>{total}</h6>
+         </div>
+        
       </div>
       <Footer />
     </div>

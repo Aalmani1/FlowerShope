@@ -4,6 +4,9 @@ const cors = require("cors");
 const PORT = 3001;
 const flower = require("./router/items");
 
+const signup = require('./router/signup');
+app.use("/new" ,signup );
+
 const user = require("./router/user");
 app.use("/user", user);
 

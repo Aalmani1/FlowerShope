@@ -7,6 +7,7 @@ import About from './About'
 import Shop from './Shop'
 import Cart from './Cart1'
 import Logein from './Logein'
+import Signup from './Signup'
 export default function NavBar() {
     return (
         <div >
@@ -26,7 +27,10 @@ export default function NavBar() {
       <Link className="navItem" to="/Logein">Logein</Link>
      </Nav.Item>
      <Nav.Item>
-       <Link className="navItem" to="/Cart"><ShoppingCartIcone /></Link>
+      <Link className="navItem" to="/Signup">Signup</Link>
+     </Nav.Item>
+     <Nav.Item>
+       <Link className="navItem" to="/Cart"><ShoppingCartIcone className="masha" /></Link>
     </Nav.Item>
   </Nav> 
 
@@ -36,6 +40,7 @@ export default function NavBar() {
     <Route path="/Shop" element={<Shop />}></Route>
     <Route path="/Cart" element={<Cart />}></Route>
     <Route path="/Logein" element={<Logein />}></Route>
+    <Route path="/Signup" element={<Signup />}></Route>
 
     </Routes>
         </Router>

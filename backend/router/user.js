@@ -1,6 +1,6 @@
 const express = require("express");
 let router = express.Router();
-const fileHandler = require("file-system");
+const fs = require("file-system");
 const users = require("../user.json");
 
 router.use(express.json());
@@ -27,5 +27,8 @@ router.post("/", function (req, res) {
   }
   
 });
+
+
+
 
 module.exports = router;
